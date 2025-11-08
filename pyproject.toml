@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=67.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "queuectl"
+version = "2.0.0"
+description = "CLI-based background job queue with workers, retries, and DLQ."
+authors = [
+  { name="Your Name", email="you@example.com" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+  "psutil",
+]
+
+[project.scripts]
+queuectl = "queuectl.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["queuectl"]
